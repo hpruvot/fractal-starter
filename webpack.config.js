@@ -8,7 +8,7 @@ module.exports = {
   mode: webpackEnv.mode,
   entry: {
     "./js/app": "./src/js/app.js",
-    "./app": "./src/scss/app.scss"
+    "./css/app": "./src/scss/app.scss"
   },
   output: {
     filename: '[name].js',
@@ -76,7 +76,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css'
+      filename: '[name].css'
     }),
     new CopyWebpackPlugin([
       {
