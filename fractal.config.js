@@ -8,6 +8,7 @@ const path = require('path');
 /*
  * Set the UI Library root path
  */
+// TODO: or keep the root folder
 const uiLibRoot = __dirname + '/';
 
 /*
@@ -18,11 +19,13 @@ const fractal = module.exports = require('@frctl/fractal').create();
 /*
  * Give your project a title.
  */
+// TODO:
 fractal.set('project.title', '[ENTER PROJECT NAME] UI Component Library');
 
 /*
  * Other project metadata.
  */
+// TODO:
 fractal.set('project.version', 'v1.0');
 fractal.set('project.repository', '[ENTER REPOSITORY URL]');
 fractal.set('project.author', '[ENTER AUTHOR NAME]');
@@ -30,6 +33,7 @@ fractal.set('project.author', '[ENTER AUTHOR NAME]');
 /*
  * Tell Fractal where to look for components.
  */
+// TODO: or keep the components folder
 fractal.components.set('path', uiLibRoot + 'components');
 
 /*
@@ -43,6 +47,7 @@ fractal.components.set('ext', '.twig');
 /*
  * Define potential Statuses for components.
  */
+// TODO:
 fractal.components.set('statuses', {
     prototype: {
         label: "Prototype",
@@ -69,11 +74,13 @@ fractal.components.set('statuses', {
 /*
  * Tell Fractal where to look for documentation pages.
  */
+// TODO: or leave the docs folder
 fractal.docs.set('path', uiLibRoot + 'docs');
 
 /*
  * Define potential Statuses for documentation pages.
  */
+// TODO:
 fractal.docs.set('statuses', {
     draft: {
         label: "Draft",
@@ -90,6 +97,7 @@ fractal.docs.set('statuses', {
 /*
  * Tell the Fractal web preview plugin where to look for static assets.
  */
+// TODO: or leave the dist folder
 fractal.web.set('static.path', uiLibRoot + 'dist');
 
 /*
@@ -97,6 +105,7 @@ fractal.web.set('static.path', uiLibRoot + 'dist');
  * web UI view into static HTML files, which can quickly and easily be shared
  * with clients or hosted using a simple static file server.
  */
+// TODO: or leave the styleguide folder
 fractal.web.set('builder.dest', uiLibRoot + 'styleguide');
 
 /**

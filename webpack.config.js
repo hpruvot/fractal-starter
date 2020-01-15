@@ -8,7 +8,8 @@ module.exports = {
   mode: webpackEnv.mode,
   entry: {
     "./js/app": "./src/js/app.js",
-    "./css/app": "./src/scss/app.scss"
+    "./css/app": "./src/scss/app.scss",
+    "./webui-overrides/overrides": "./src/webui-overrides/overrides.scss"
   },
   output: {
     filename: '[name].js',
@@ -57,7 +58,12 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader']
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'webui-overrides/icons',
+          publicPath: 'icons/'
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf)$/,
@@ -82,7 +88,7 @@ module.exports = {
       {
         from: path.resolve(__dirname, 'src/font'),
         to: 'font',
-        test: /\.(woff|woff2|eot|ttf|svg)$/
+        test: /\.(woff|woff2)$/
       },
       {
         from: path.resolve(__dirname, 'src/img'),
@@ -90,7 +96,8 @@ module.exports = {
       },
       {
         from: path.resolve(__dirname, 'src/webui-overrides'),
-        to: 'webui-overrides'
+        to: 'webui-overrides',
+        ignore: ['overrides.scss', 'overrides.css']
       }
     ]),
     new FractalWebpackPlugin({

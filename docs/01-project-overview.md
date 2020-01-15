@@ -1,6 +1,6 @@
 ---
 title: Project Overview
-status: draft
+status: published
 ---
 A little bit of information about the organisation...
 
