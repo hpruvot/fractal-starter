@@ -87,6 +87,10 @@ module.exports = {
       {
         from: path.resolve(__dirname, 'src/img'),
         to: 'img'
+      },
+      {
+        from: path.resolve(__dirname, 'src/webui-overrides'),
+        to: 'webui-overrides'
       }
     ]),
     new FractalWebpackPlugin({

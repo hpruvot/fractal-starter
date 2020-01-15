@@ -4,6 +4,3 @@
 node_modules
 webpack.mode.js
 styleguide
-
-dist
-!dist/webui-overrides
