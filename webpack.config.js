@@ -101,8 +101,8 @@ module.exports = {
       }
     ]),
     new FractalWebpackPlugin({
-      mode: 'server', // mode: 'build'
-      configPath: './fractal.config.js' // defaults to 'fractal.js'
+      mode: webpackEnv.mode === 'development' ? 'server' : 'build',
+      configPath: './fractal.config.js'
     })
   ],
   watch: webpackEnv.mode === 'development'
