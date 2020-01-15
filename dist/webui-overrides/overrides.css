@@ -1,0 +1,38 @@
+.Pen-top {
+  order: 1;
+}
+
+#tree-components-collection-common {
+  padding: 10px 0 15px;
+  margin: 0 40px;
+  border-bottom: 1px solid #ebecee;
+}
+
+#tree-components-collection-common>h3 {
+  padding: 7px 0 !important;
+  color: rgba(34,37,43,.87);
+  font-family: Lato,sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#tree-components-collection-common>h3 span {
+  padding-left: 40px !important;
+}
+
+#tree-components-collection-common>h3 span::before {
+  top: 2px;
+  left: 0 !important;
+  width: 26px;
+  height: 26px;
+  background-image: url(icons/icon-settings.svg) !important;
+}
+
+.Prose pre {
+  background: rgba(83, 83, 99, 0.075);
+}
+
+.Prose pre code {
+  background: none;
+}
