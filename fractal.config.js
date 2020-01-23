@@ -172,14 +172,14 @@ fractal.cli.command('export', exportTemplates,  {
 */
 
 const webUITheme = require('mono-fractal')({
-  styles: ['default', '/webui-overrides/overrides.css']
+  styles: ['default', '/css/app.css', '/webui/overrides.css']
 });
 
 /*
 * Specify a directory to hold the theme override templates
 * See https://github.com/frctl/mandelbrot/tree/master/views for examples of default templates
 */
-webUITheme.addLoadPath(uiLibRoot + 'dist/webui-overrides');
+webUITheme.addLoadPath(uiLibRoot + 'dist/webui');
 
 /*
 * Tell Fractal to use the configured theme by default

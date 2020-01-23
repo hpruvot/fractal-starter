@@ -9,7 +9,7 @@ module.exports = {
   entry: {
     "./js/app": "./src/js/app.js",
     "./css/app": "./src/scss/app.scss",
-    "./webui-overrides/overrides": "./src/webui-overrides/overrides.scss"
+    "./webui/overrides": "./src/webui/overrides.scss"
   },
   output: {
     filename: '[name].js',
@@ -61,7 +61,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          outputPath: 'webui-overrides/icons',
+          outputPath: 'webui/icons',
           publicPath: 'icons/'
         },
       },
@@ -86,17 +86,12 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, 'src/font'),
-        to: 'font',
-        test: /\.(woff|woff2)$/
-      },
-      {
         from: path.resolve(__dirname, 'src/img'),
         to: 'img'
       },
       {
-        from: path.resolve(__dirname, 'src/webui-overrides'),
-        to: 'webui-overrides',
+        from: path.resolve(__dirname, 'src/webui'),
+        to: 'webui',
         ignore: ['overrides.scss', 'overrides.css']
       }
     ]),

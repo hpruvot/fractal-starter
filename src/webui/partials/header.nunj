@@ -1,5 +1,6 @@
 <div class="Header">
-    <a href="{{ path('/') }}">{{ frctl.get('project.title') | default('Component Library') }}</a>
+    <a href="{{ path('/') }}">
+    {% include 'img/logo.svg' %} / {{ frctl.get('project.title') | default('Component Library') }}</a>
     {% if frctl.get('project.repository') %}
     <div class="Header-Utils">
         <span>{{ frctl.get('project.version') }}</span>
