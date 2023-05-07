@@ -3,7 +3,7 @@
         "dev": "webpack --progress --colors"
     },
     "dependencies": {
-        "@frctl/fractal": "^1.1.7",
+        "@frctl/fractal": "^1.5.15",
         "@frctl/twig": "^1.0.0-beta.5",
         "mono-fractal": "^1.0.0"
     },
